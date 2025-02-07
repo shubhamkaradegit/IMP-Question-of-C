@@ -2,24 +2,24 @@
 
 int main()
 {
-    int n;
+    int n, sum = 0;
+    int num[100];
+    float avg;
 
-    printf("Enter the number of elements  : ");
+    printf("enter the numbers : ");
     scanf("%d", &n);
 
-    float arr[n];
-    float sum = 0.0;
-
-    printf("Enter %d Elements : \n", n);
     for (int i = 0; i < n; i++)
     {
-        printf("Element %d : ", i);
-        scanf("%f", &arr[i]);
-        sum += arr[i];
+        printf("number is %d : ", i + 1);
+        scanf("%d", &num[i]);
+
+        sum += num[i];
+        
     }
+    printf("sum is : %d\n", sum);
+    avg = sum / n;
 
-    float average = sum / n;
-
-    printf("The average of the entered element is : %.2f", average);
+    printf("Avg is : %.2f\n", avg);
     return 0;
 }
